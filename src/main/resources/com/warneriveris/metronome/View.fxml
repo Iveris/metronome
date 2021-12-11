@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" minHeight="200.0" minWidth="300.0" spacing="20.0" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.warneriveris.metronome.ViewController">
+   <children>
+      <HBox alignment="CENTER" spacing="30.0">
+         <children>
+            <Label fx:id="BPM" alignment="CENTER" contentDisplay="CENTER" text="60" HBox.hgrow="ALWAYS" />
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER">
+         <children>
+            <Button contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onMouseClicked="#decrement">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="50.0" onMouseClicked="#decrement" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/rewind.png" />
+                     </image></ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onMouseClicked="#startStop" HBox.hgrow="NEVER">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="50.0" onMouseClicked="#startStop" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/start.png" />
+                     </image></ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onMouseClicked="#increment">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="50.0" onMouseClicked="#increment" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/fast-forward.png" />
+                     </image></ImageView>
+               </graphic>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="10.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>
