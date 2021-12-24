@@ -8,7 +8,7 @@ public class ViewController {
 	@FXML
 	public Label BPM = new Label();
 	
-	MetronomeControls controls = new Metronome();
+//	MetronomeControls controls = Controller.getInstance();
 	
 	
 	public void decrement() {
